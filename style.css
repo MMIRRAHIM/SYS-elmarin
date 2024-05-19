@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.spartan-light, .spartan-medium {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.spartan-light {
+    font-weight: 300;
+}
+
+.spartan-medium {
+    font-weight: 400;
+}
+
+.poppins-medium, .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-weight: 500;
+}
+
+.poppins-semibold {
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.header-title {
+    color: grey;
+}
+
+.search-container {
+    background-color: rgb(181, 181, 181);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category {
+    margin-top: 24px;
+}
+
+.category-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.category-item:nth-child(2) {
+    justify-content: center;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    & > a {
+        border-bottom: 1.61px solid grey;
+    }
+}
+
+.category-item:nth-child(3) {
+    justify-content: flex-end;
+}
+
+.category-item > a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16.24px;
+}
+
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.product {
+    width: 100%;
+}
+
+.unique-bed{
+    margin-top: 18px;
+}
+
+.product-info > h3 {
+    font-size: 15px;
+}
+
+.product-info > p {
+    padding: 8px 0;
+    font-size: 13px;
+    border-bottom: 0.5px solid rgb(127, 127, 127);
+}
+
+.product-actions {
+    display: flex;
+    padding: 8px 0;
+    justify-content: space-between;
+}
+
+.price > strong {
+    font-size: 15px;
+    color: rgb(63, 63, 63);
+}
+
+.tools > a{
+    text-decoration: none;
+    color: rgb(84, 84, 83);
+}
+
+.tools {
+    display: flex;
+    gap: 5px;
+}
+
+.tools > button {
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background-color: rgb(78, 78, 78);
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #c5c3c3;
+    padding: 16px 30px;
+    color: black;
+}
+
+.footer-menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.product-detail {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    align-items: start; /* Выравнивание элементов в начале контейнера */
+}
+
+.img-uniq {
+    flex: 1; /* Занимает половину доступного пространства */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого */
+}
+
+.product-image-large img {
+    width: 100%; /* Полная ширина родительского блока */
+    max-width: 500px; /* Максимальная ширина изображения */
+    height: 500px;
+    margin-bottom: 20px; /* Отступ между изображением и кнопкой */
+}
+
+.desc-uniq {
+    flex: 1; /* Занимает половину доступного пространства */
+    padding: 20px;
+    height: 608px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Центрирование содержимого по вертикали */
+}
+
+.back-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    align-self: center; /* Выравнивание по центру родительского блока */
+}
+
+.add-to-cart-button, .back-button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    background-color: grey;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+}

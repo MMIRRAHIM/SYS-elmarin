@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница товара</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function addToCart() {
+        alert('Товар добавлен в корзину!');
+      }
+    </script>
+</head>
+<body>
+    <div class="product-detail">
+        <div class="img-uniq">
+            <div class="product-image-large">
+                <img src="./images/1.PNG" alt="Зеленая кровать">
+            </div>
+            <a href="index.html" class="back-button">Назад к товарам</a>
+        </div>
+        <div class="desc-uniq">
+            <h3 class="poppins-medium"> iPHONE</h3>
+            <p class="product-description poppins-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Ea commodi dolor neque vitae rem molestias, id omnis sed deleniti necessitatibus voluptates aspernatur
+                 dolorum aliquam assumenda quasi natus harum ipsa, 
+                et voluptatum quisquam cupiditate. Atque et incidunt fugiat possimus rerum alias.
+            </p>
+            <div class="price poppins-medium">$284.00</div>
+            <button class="add-to-cart-button" onclick="addToCart()">Добавить в корзину</button>
+        </div>
+    </div>
+    <script src="db.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+
+        const product = products.find(p => p.id === productId);
+        if (product) {
+            document.querySelector('.product-image-large img').src = product.image;
+            document.querySelector('.product-image-large img').alt = product.name;
+            document.querySelector('.product-detail h3').textContent = product.name;
+            document.querySelector('.product-detail .product-description').textContent = product.description;
+            document.querySelector('.product-detail .price').textContent = `$${product.price}`;
+        } else {
+            document.querySelector('.product-detail').innerHTML = '<p>Product not found.</p>';
+        }
+    });
+    </script>
+
+</body>
+</html>
